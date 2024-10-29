@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <script>
+        var array=[13,"jashwanth",25,"my array"]
+        console.log(array);
+        console.log(array[0]);
+        console.log(array.length);
+        console.log(array.length-1);
+        
+        function myfunction() {
+
+            console.log("this is function 1");
+        }
+            
+        
+        myfunction();  
+
+        for(i=0;i<=array.length-1;i++){
+            console.log(array[i]);
+            
+        }
+        var str=array.toString();/* converts into string */
+        console.log(str);
+        console.log(typeof(str));
+        var last=array.pop();/* removes last element */
+        console.log(last);
+        console.log(array);
+        var add=array.push(15);/* adds the element at end of the array */
+        console.log(array);
+        var first=array.shift()/* removes first element from the array */
+        console.log(first);
+        console.log(array);
+        var addfirst=array.unshift("simplilearn")
+        console.log(addfirst);
+        console.log(array);
+        var array1=[12,56,7,8,90,"Bommakanti"]
+        var mixarray=array.concat(array1) /* creates new array by adding existing arrays */
+        console.log(mixarray);
+        mixarray.sort() /* numbers are not sorted because array will store the data in the form of objects */
+        console.log(mixarray);
+        array1.sort(function(a,b){   /* sorts the numbers */
+            return a-b;
+        })
+        console.log(array1);
+        mixarray.reverse()
+        console.log(mixarray);
+        array1.reverse()
+        console.log(array1);
+        var num1=[12,25,2,4,3,98,8]
+        var num2=num1.map(multiply)
+        function multiply(value){
+            return value*2
+        }
+        console.log(num2);
+        var num3=num1.filter(condition) /* applies the condition if the condition is true then only the element is pushed into the array */
+        function condition(value){
+            return value >20
+        }
+        console.log(num3);
+        var num4=num1.reduce(sum) /* reduce function will allow you to transform an array into single value */
+          
+        function sum(total,value){
+                return total+value;
+        }
+        console.log(num4);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
